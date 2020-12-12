@@ -1,0 +1,10 @@
+<div class="title-bar">
+    <h2>Todays Review List</h2>
+    <a [routerLink]="['/create-passage']">Create Passage</a>
+</div>
+<div class="passage-list">
+    <app-passage-item
+        *ngFor="let passage of passages"
+        [passage]="passage"
+    ></app-passage-item>
+</div>

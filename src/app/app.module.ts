@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PassageListComponent } from './passage-list/passage-list.component';
+import { PassageItemComponent } from './passage-item/passage-item.component';
+import { CreatePassageComponent } from './create-passage/create-passage.component';
+import { PassageComponent } from './passage/passage.component';
+import { EditPassageComponent } from './edit-passage/edit-passage.component';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PassageListComponent,
+    PassageItemComponent,
+    CreatePassageComponent,
+    PassageComponent,
+    EditPassageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    InlineSVGModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

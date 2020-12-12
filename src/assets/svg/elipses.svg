@@ -1,0 +1,6 @@
+<svg id="elipses" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <circle class="outline" cx="200" cy="200" r="142.5" stroke="black" stroke-width="15"/>
+  <circle class="dot" cx="200" cy="200" r="25" fill="black"/>
+  <circle class="dot" cx="275" cy="200" r="25" fill="black"/>
+  <circle class="dot" cx="125" cy="200" r="25" fill="black"/>
+</svg>

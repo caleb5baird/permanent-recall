@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+:host {
+    .title-bar {
+        background-color: $Base02;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {margin: 0;}
+        a {
+            background-color: $Cyan;
+            color: $Base03;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    }
+
+    .passage-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
