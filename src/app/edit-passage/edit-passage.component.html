@@ -1,1 +1,43 @@
-<p>edit-passage works!</p>
+<form id="edit-passage" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input
+        type="text"
+        id="prompt"
+        name="prompt"
+        placeholder="Prompt"
+        class="form-control"
+        [ngModel]="passage?.prompt"
+        #name="ngModel"
+        required
+        ng-invalid
+        ng-touched
+    >
+    <input
+        type="text"
+        id="reference"
+        name="reference"
+        placeholder="Reference"
+        class="form-control"
+        [ngModel]="passage?.reference"
+        #name="ngModel"
+        required
+        ng-invalid
+        ng-touched
+    >
+    <textarea
+        id="text"
+        name="text"
+        placeholder="Text"
+        class="form-control"
+        [ngModel]="passage?.text"
+        #name="ngModel"
+        required
+        ng-invalid
+        ng-touched
+    ></textarea>
+    <div class="row">
+        <button type="submit" [disabled]="f.invalid">Save</button>
+        <button type="button" (click)="onCancel()">Cancel</button>
+        <button *ngIf="mode === 'edit'"
+            type="button" class="danger" (click)="deletePassage()">Delete</button>
+    </div>
+</form>

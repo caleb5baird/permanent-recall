@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Passage } from '../passage.model';
 
 @Component({
   selector: 'app-create-passage',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatePassageComponent implements OnInit {
 
+  @Input() passage: Passage;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

@@ -10,6 +10,7 @@ import { PassageComponent } from './passage/passage.component';
 import { EditPassageComponent } from './edit-passage/edit-passage.component';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InlineSVGModule.forRoot()
+    InlineSVGModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

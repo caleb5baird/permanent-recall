@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Passage } from '../passage.model';
+import { PassageService } from '../passage.service';
 
 @Component({
   selector: 'app-passage',
@@ -10,9 +11,12 @@ export class PassageComponent implements OnInit {
 
   @Input() passage: Passage;
 
-  constructor() { }
+  constructor(private passageService: PassageService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  markAsReviewed(): void {
+    this.passageService.review(this.passage);
   }
 
 }

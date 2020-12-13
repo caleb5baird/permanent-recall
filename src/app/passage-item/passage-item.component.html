@@ -1,10 +1,19 @@
 <div class="passage" [ngSwitch]="mode">
-    <div class="toolbar" *ngIf="mode != 'edit'">
+    <div class="toolbar" *ngIf="mode === 'view'">
         <button (click)="editPassage()">
             <div [inlineSVG]="'/assets/svg/edit.svg'"></div>
         </button>
     </div>
 
-    <app-edit-passage [passage]="passage" *ngSwitchCase="'edit'" ></app-edit-passage>
+    <app-edit-passage *ngSwitchCase="'edit'"
+                      (cancelEditPassage)="cancelEditPassage($event)"
+                      (switchModeEvent)="switchMode($event)"
+                      [originalPassage]="passage"
+                      [mode]="mode"
+    ></app-edit-passage>
+    <app-edit-passage *ngSwitchCase="'create'"
+                      [orignalPassage]="passage"
+                      [mode]="mode"
+    ></app-edit-passage>
     <app-passage [passage]="passage" *ngSwitchDefault ></app-passage>
 </div>

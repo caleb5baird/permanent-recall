@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+:host {
+    .title-bar {
+        padding: 10px;
+        h2 { margin: 0; }
+        background-color: $Base02;
+    }
+}

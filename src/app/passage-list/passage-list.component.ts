@@ -24,5 +24,4 @@ export class PassageListComponent implements OnInit {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-
 }

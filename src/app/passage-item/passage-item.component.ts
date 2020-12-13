@@ -1,10 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Passage } from '../passage.model';
-
-enum Mode {
-  View = 'view',
-  Edit = 'edit'
-}
+import { Passage, Mode } from '../passage.model';
 
 @Component({
   selector: 'app-passage-item',
@@ -15,13 +10,16 @@ export class PassageItemComponent implements OnInit {
 
 
   @Input() passage: Passage;
-  mode = Mode.View;
+  @Input() mode: Mode;
 
   constructor() { }
 
   editPassage() { this.mode = Mode.Edit; }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  switchMode($event) {
+    this.mode = $event;
   }
 
 }
